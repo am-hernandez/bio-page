@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  
+
+  <title>A.M. Hernandez | Web Dev</title>
+<style id="jsbin-css">
+body {
+  background-color: #000;
+  color: white;
+  margin: 0;
+}
+
+header {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-template-areas:
+    "heading pic"
+    "nav pic";
+}
+
+#heading {
+  text-align: left;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  grid-area: heading;
+}
+
+#navList {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+  width: 65%;
+  max-width: 6em;
+}
+
+#navList li {
+  list-style-type: none;
+  padding: 0 1rem;
+}
+
+#navList li:first-child {
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ff6f57;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+#profile-img {
+  width: 8rem;
+  margin: auto;
+  margin-right: 1rem;
+  border-radius: 16px;
+  border: 6px solid #ff6f57;
+  box-shadow: 0 0 12px #ff745c,
+    inset 0 0 12px #ffccfc;
+  grid-area: pic;
+}
+
+#main-container {
+  margin: auto;
+  width: 80%;
+  max-width: 1920px;
+  font-family: 'Cutive Mono', monospace;
+}
+
+nav {
+  font-family: 'Cutive Mono', monospace;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  margin: auto;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  text-align: center;
+  background-color: #000;
+  border-radius: 16px;
+  /* neon effects */
+  border: 6px solid #ff6f57;
+  box-shadow: 0 0 12px #ff745c,
+    inset 0 0 12px #ffccfc;
+}
+
+.container:hover, #profile-img:hover {
+  filter: brightness(1.50);
+  transition: "filter 1s linear";
+  font-weight: bold;
+}
+
+#skills h2 {
+  margin-bottom: 0;
+}
+
+#skillLists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "left right";
+}
+
+#tech {
+  display-area: left;
+}
+
+#transferable {
+  display-area: right;
+}
+
+#tech ul, #transferable ul {
+  padding: 0;
+}
+
+#tech li, #transferable li {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+}
+
+#tech li:hover, #transferable li:hover {
+  background-color: #333;
+}
+
+/**********************/
+/*start of media query*/
+@media(max-width: 600px){
+  #profile-img {
+    height: 100px;
+    width: 100px;
+    margin: 1rem 1rem 1rem 1rem;
+  }
+  
+  #navList {
+    font-size: 14px;
+  }
+  
+  #navList li {
+    margin-top: 1rem;
+    padding: 0 .5em;
+  }
+  
+  #navList li:first-child {
+    padding-left: 0;
+  }
+}
+@media(max-width: 360px){
+  #heading h1 {
+    font-size: 1em;
+  }
+  
+  #heading h4 {
+    margin-bottom: 0;
+    font-size: .8em;
+  }
+  
+  #profile-img {
+    width: 4rem;
+    height: 4rem;
+    margin: .8em .8em 1em .8em;
+  }
+  
+  #navList {
+    /*display: inline-block;*/
+    text-align: left;
+    float: left;
+  }
+  
+  #navList li {
+    justify-content: space-between;
+  }
+  
+  #skills {
+    font-size: .9em;
+  }
+}
+/*end of media query*/
+/********************/
+</style>
+</head>
+  <body>
+    <header>
+      <img id ="profile-img" src="https://www.memphisveterinaryspecialists.com/files/best-breeds-of-house-cats-memphis-vet-1-1.jpeg">
+      <!-- <img id ="profile-img" src="img/amh.png"> -->
+      <div id="heading">
+        <h1>A.M. Hernandez</h1>
+        <h4>[ WEB DEVELOPER ]</h4>
+      </div>
+      <nav>
+          <ul id="navList">
+            <li><a href="#background">Background</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+          </ul>
+        </nav>
+    </header>
+    <div id="main-container">
+      <div class="container" id="background">
+        <h2>Background</h2>
+        <p>
+          I am a New York native with a background in retail management. I love creative projects and finding solutions to common and not-so-common problems. I am currently on the path to becoming a fullstack web developer with a focus on Progressive Web Applications.</p>
+
+      </div>
+      <div class="container" id="experience">
+        <h2>Experience</h2>
+        <p>
+          I have experience working in dynamic environments where goals are modified on a regular basis. I have learned to be adaptive in my workflow and approach to new project aims. I will update this site with a collection of projects soon, but for now please check out my <a href="https://github.com/am-hernandez" target="_blank">github</a> and my <a href="https://codepen.io/amh112" target="_blank">codePen</a> for some fun examples.
+        </p>
+
+      </div>
+      <div class="container"  id="skills">
+        <h2>Skills</h2>
+        <div id="skillLists">
+          <div id="tech">
+            <h4 id="tech-h4">TECH</h4>
+            <ul id="tech-ul">
+              <li>javascript</li>
+              <li>html5</li>
+              <li>css3</li>
+            </ul>
+          </div>
+          <div id="transferable">
+            <h4 id="trx-h4">TRANSFERABLE</h4>
+            <ul id="trx-ul">
+              <li>time management</li>
+              <li>leadership</li>
+              <li>organization</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="container" id="hobbies">
+        <h2>Hobbies</h2>
+        <p>
+          Herb gardening and apartment-style mushroom farming. I also spend my free time making drawings using pencil, charcoal, or ink. I keep busy by occupying my hands, so drawing, crafting, gardening, and coding blend easily into my daily routine.
+        </p>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  <script id="jsbin-javascript">
+let techUl = document.getElementById("tech-ul");
+let techH4 = document.getElementById("tech-h4");
+let trxUl = document.getElementById("trx-ul");
+let trxH4 = document.getElementById("trx-h4");
+
+
+techUl.addEventListener("mouseover", function(){
+  techH4.style.backgroundColor = "#ff6f57";
+  /* transition the background-color over 1s with a linear animation */
+  techH4.style.transition = "background-color 1s linear";
+});
+techUl.addEventListener("mouseleave", function(){
+  techH4.style.backgroundColor = "#000";
+});
+
+trxUl.addEventListener("mouseover", function(){
+  trxH4.style.backgroundColor = "#ff6f57";
+  /* transition the background-color over 1s with a linear animation */
+  trxH4.style.transition = "background-color 1s linear";
+});
+trxUl.addEventListener("mouseleave", function(){
+  trxH4.style.backgroundColor = "#000";
+});
+</script>
+
+<script id="jsbin-source-html" type="text/html"><!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  
+
+  <title>A.M. Hernandez | Web Dev</title>
+</head>
+  <body>
+    <header>
+      <img id ="profile-img" src="https://www.memphisveterinaryspecialists.com/files/best-breeds-of-house-cats-memphis-vet-1-1.jpeg">
+      <\!-- <img id ="profile-img" src="img/amh.png"> -->
+      <div id="heading">
+        <h1>A.M. Hernandez</h1>
+        <h4>[ WEB DEVELOPER ]</h4>
+      </div>
+      <nav>
+          <ul id="navList">
+            <li><a href="#background">Background</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+          </ul>
+        </nav>
+    </header>
+    <div id="main-container">
+      <div class="container" id="background">
+        <h2>Background</h2>
+        <p>
+          I am a New York native with a background in retail management. I love creative projects and finding solutions to common and not-so-common problems. I am currently on the path to becoming a fullstack web developer with a focus on Progressive Web Applications.</p>
+
+      </div>
+      <div class="container" id="experience">
+        <h2>Experience</h2>
+        <p>
+          I have experience working in dynamic environments where goals are modified on a regular basis. I have learned to be adaptive in my workflow and approach to new project aims. I will update this site with a collection of projects soon, but for now please check out my <a href="https://github.com/am-hernandez" target="_blank">github</a> and my <a href="https://codepen.io/amh112" target="_blank">codePen</a> for some fun examples.
+        </p>
+
+      </div>
+      <div class="container"  id="skills">
+        <h2>Skills</h2>
+        <div id="skillLists">
+          <div id="tech">
+            <h4 id="tech-h4">TECH</h4>
+            <ul id="tech-ul">
+              <li>javascript</li>
+              <li>html5</li>
+              <li>css3</li>
+            </ul>
+          </div>
+          <div id="transferable">
+            <h4 id="trx-h4">TRANSFERABLE</h4>
+            <ul id="trx-ul">
+              <li>time management</li>
+              <li>leadership</li>
+              <li>organization</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="container" id="hobbies">
+        <h2>Hobbies</h2>
+        <p>
+          Herb gardening and apartment-style mushroom farming. I also spend my free time making drawings using pencil, charcoal, or ink. I keep busy by occupying my hands, so drawing, crafting, gardening, and coding blend easily into my daily routine.
+        </p>
+      </div>
+    </div>
+    <script src="main.js"><\/script>
+  </body>
+</html>
+</script>
+
+<script id="jsbin-source-css" type="text/css">body {
+  background-color: #000;
+  color: white;
+  margin: 0;
+}
+
+header {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #333;
+  text-align: center;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-template-areas:
+    "heading pic"
+    "nav pic";
+}
+
+#heading {
+  text-align: left;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  grid-area: heading;
+}
+
+#navList {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+  width: 65%;
+  max-width: 6em;
+}
+
+#navList li {
+  list-style-type: none;
+  padding: 0 1rem;
+}
+
+#navList li:first-child {
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ff6f57;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+#profile-img {
+  width: 8rem;
+  margin: auto;
+  margin-right: 1rem;
+  border-radius: 16px;
+  border: 6px solid #ff6f57;
+  box-shadow: 0 0 12px #ff745c,
+    inset 0 0 12px #ffccfc;
+  grid-area: pic;
+}
+
+#main-container {
+  margin: auto;
+  width: 80%;
+  max-width: 1920px;
+  font-family: 'Cutive Mono', monospace;
+}
+
+nav {
+  font-family: 'Cutive Mono', monospace;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  margin: auto;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  text-align: center;
+  background-color: #000;
+  border-radius: 16px;
+  /* neon effects */
+  border: 6px solid #ff6f57;
+  box-shadow: 0 0 12px #ff745c,
+    inset 0 0 12px #ffccfc;
+}
+
+.container:hover, #profile-img:hover {
+  filter: brightness(1.50);
+  transition: "filter 1s linear";
+  font-weight: bold;
+}
+
+#skills h2 {
+  margin-bottom: 0;
+}
+
+#skillLists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "left right";
+}
+
+#tech {
+  display-area: left;
+}
+
+#transferable {
+  display-area: right;
+}
+
+#tech ul, #transferable ul {
+  padding: 0;
+}
+
+#tech li, #transferable li {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+}
+
+#tech li:hover, #transferable li:hover {
+  background-color: #333;
+}
+
+/**********************/
+/*start of media query*/
+@media(max-width: 600px){
+  #profile-img {
+    height: 100px;
+    width: 100px;
+    margin: 1rem 1rem 1rem 1rem;
+  }
+  
+  #navList {
+    font-size: 14px;
+  }
+  
+  #navList li {
+    margin-top: 1rem;
+    padding: 0 .5em;
+  }
+  
+  #navList li:first-child {
+    padding-left: 0;
+  }
+}
+@media(max-width: 360px){
+  #heading h1 {
+    font-size: 1em;
+  }
+  
+  #heading h4 {
+    margin-bottom: 0;
+    font-size: .8em;
+  }
+  
+  #profile-img {
+    width: 4rem;
+    height: 4rem;
+    margin: .8em .8em 1em .8em;
+  }
+  
+  #navList {
+    /*display: inline-block;*/
+    text-align: left;
+    float: left;
+  }
+  
+  #navList li {
+    justify-content: space-between;
+  }
+  
+  #skills {
+    font-size: .9em;
+  }
+}
+/*end of media query*/
+/********************/
+</script>
+
+<script id="jsbin-source-javascript" type="text/javascript">let techUl = document.getElementById("tech-ul");
+let techH4 = document.getElementById("tech-h4");
+let trxUl = document.getElementById("trx-ul");
+let trxH4 = document.getElementById("trx-h4");
+
+
+techUl.addEventListener("mouseover", function(){
+  techH4.style.backgroundColor = "#ff6f57";
+  /* transition the background-color over 1s with a linear animation */
+  techH4.style.transition = "background-color 1s linear";
+});
+techUl.addEventListener("mouseleave", function(){
+  techH4.style.backgroundColor = "#000";
+});
+
+trxUl.addEventListener("mouseover", function(){
+  trxH4.style.backgroundColor = "#ff6f57";
+  /* transition the background-color over 1s with a linear animation */
+  trxH4.style.transition = "background-color 1s linear";
+});
+trxUl.addEventListener("mouseleave", function(){
+  trxH4.style.backgroundColor = "#000";
+});</script></body>
+</html>
