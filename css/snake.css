@@ -94,15 +94,6 @@ h1, h2, h3, h4 {
   color: #02111B;
 }
 
-/*@keyframes turn {*/
-/*  from { transform: rotateY(0) }*/
-/*  to { transform: rotateY(5deg) }*/
-/*}*/
-
-/*.container:hover {*/
-/*  animation: turn .5s linear forwards;*/
-/*}*/
-
 #main-container {
   margin: auto;
   width: 90%;
@@ -177,15 +168,14 @@ button:hover {
 
 /**********************/
 /*start of media query*/
-@media(max-width: 640px){
+@media(max-width: 680px){
   #profile-img {
-    height: 100px;
-    width: 100px;
-    margin: 1rem 1rem 1rem 1rem;
+    width: 7rem;
+    margin: 1rem;
   }
   
   #navList li {
-    margin-top: 1rem;
+    margin-top: 1.25rem;
   }
 
 @media(max-width: 499px){
@@ -204,7 +194,6 @@ button:hover {
   
   #profile-img {
     width: 4rem;
-    height: 4rem;
   }
   
   nav {
